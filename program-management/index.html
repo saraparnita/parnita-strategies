@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parnita Strategies | Program Management & External Affairs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark: #1a1a1a;
+            --cream: #f5f1ed;
+            --sage: #8b9a7f;
+            --clay: #b8956a;
+            --accent: #d4af37;
+            --gray-light: #e8e4df;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation & Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2.5rem 5%;
+            background: linear-gradient(135deg, rgba(245, 241, 237, 0.95) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border-bottom: 1px solid rgba(139, 154, 127, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 6px 0;
+        }
+
+        .logo-line {
+            height: 2px;
+            background-color: var(--dark);
+            width: 100%;
+        }
+
+        .tagline {
+            font-size: 0.85rem;
+            color: var(--sage);
+            font-style: italic;
+            letter-spacing: 0.2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 5% 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .experience-summary {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-light);
+        }
+
+        .exp-item {
+            font-size: 0.95rem;
+            color: var(--dark);
+        }
+
+        .exp-item p {
+            margin: 0.3rem 0;
+        }
+
+        .exp-label {
+            font-weight: 600;
+            color: var(--clay);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 3rem 5%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-top: 1px solid var(--gray-light);
+            border-bottom: 1px solid var(--gray-light);
+            margin: 2rem auto;
+        }
+
+        .services h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .service {
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .service:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .service-meta {
+            font-size: 0.85rem;
+            color: var(--sage);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .service-desc {
+            font-size: 0.95rem;
+            color: var(--dark);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Reasons Section */
+        .reasons {
+            padding: 2rem 5%;
+            max-width: 100%;
+            margin: 0;
+            width: 100%;
+        }
+
+        .reasons h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--clay);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .reason-quote {
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--sage);
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--accent);
+            line-height: 1.7;
+        }
+
+        /* Results Section */
+        .results {
+            padding: 3rem 5%;
+            max-width: 100%;
+            margin: 2rem 0 0 0;
+            width: 100%;
+        }
+
+        .results h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--clay);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .results-grid-horizontal {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+        }
+
+        .result-item {
+            background: white;
+            border-left: 4px solid var(--accent);
+            padding: 1.2rem;
+            border-radius: 2px;
+            box-shadow: 0 2px 8px rgba(26, 26, 26, 0.04);
+        }
+
+        .result-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--clay);
+            margin-bottom: 0.5rem;
+        }
+
+        .result-desc {
+            font-size: 0.8rem;
+            color: var(--dark);
+            line-height: 1.4;
+        }
+
+        /* Belief Section */
+        .belief {
+            padding: 4rem 5%;
+            max-width: 100%;
+            margin: 3rem 0;
+            background: linear-gradient(135deg, rgba(184, 149, 106, 0.08) 0%, rgba(139, 154, 127, 0.08) 100%);
+            border-radius: 2px;
+            width: 100%;
+        }
+
+        .belief h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--clay);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .belief-quote {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--dark);
+            line-height: 1.9;
+            max-width: 900px;
+        }
+
+        /* Assessment Section */
+        .assessment-section {
+            padding: 2rem 5%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .assessment-section h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .assessment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .assessment-card {
+            background: white;
+            border: 1px solid var(--gray-light);
+            padding: 1.5rem;
+            border-radius: 2px;
+            box-shadow: 0 2px 8px rgba(26, 26, 26, 0.04);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .assessment-card:hover {
+            box-shadow: 0 4px 16px rgba(26, 26, 26, 0.08);
+        }
+
+        .assessment-title {
+            font-weight: 700;
+            color: var(--clay);
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .assessment-label {
+            font-weight: 600;
+            color: var(--sage);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .assessment-value {
+            color: var(--dark);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .strength-list {
+            list-style: none;
+            font-size: 0.9rem;
+            color: var(--dark);
+        }
+
+        .strength-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .strength-list li:before {
+            content: "↳";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem 5%;
+            text-align: center;
+            border-top: 1px solid var(--gray-light);
+            margin-top: 3rem;
+            background: rgba(245, 241, 237, 0.5);
+        }
+
+        .contact-info {
+            font-size: 0.9rem;
+            color: var(--sage);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info a {
+            color: var(--clay);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .experience-summary,
+            .assessment-grid,
+            .service-grid,
+            .reasons-grid,
+            .results-grid-horizontal {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 1.5rem 5%;
+            }
+
+            .logo {
+                font-size: 1.4rem;
+            }
+
+            .services {
+                padding: 2rem 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">
+                <div class="logo-line"></div>
+                <div class="logo-line"></div>
+                <div class="logo-line"></div>
+            </div>
+            <span>Parnita Strategies</span>
+        </div>
+        <div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--dark); margin-bottom: 0.3rem;">Sara Chima</div>
+            <div class="tagline" style="font-size: 0.95rem; font-style: normal; font-weight: 500;">Program Management & External Affairs</div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>I drive operations and program management on behalf of mission-driven leaders so they can focus on delivering on the mission.</h1>
+
+        <div class="experience-summary">
+            <div class="exp-item">
+                <p class="exp-label">Previously</p>
+                <p>Robinhood · Meta · Procurated (Series A GovTech)</p>
+            </div>
+            <div class="exp-item">
+                <p class="exp-label">Functions</p>
+                <p>Program Management · External Affairs · Chief of Staff</p>
+            </div>
+            <div class="exp-item">
+                <p class="exp-label">Sectors</p>
+                <p>Mission-driven Nonprofits · Advocacy · Policy-Adjacent Startups</p>
+            </div>
+            <div class="exp-item">
+                <p class="exp-label">Education</p>
+                <p>BA Emory University, MBA University of Cambridge</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="services">
+        <h2>Services</h2>
+        <div class="service-grid">
+            <div class="service">
+                <h3>Program Management and External Affairs</h3>
+                <p class="service-meta">2-month minimum retainer, minimum 10 hrs/week</p>
+                <p class="service-desc">
+                    Program planning and oversight, strategic planning, board prep and execution, stakeholder management, external executive communications, funder communications, grant management, and talent planning.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Projects and Operating Sprints</h3>
+                <p class="service-meta">4–8 week projects</p>
+                <p class="service-desc">
+                    Convening and event design, multi-stakeholder coalition coordination, grant operations and funder reporting, project management for key initiatives, and full-cycle recruiting for key hires.
+                </p>
+            </div>
+        </div>
+
+        <div class="reasons">
+            <h4>When to reach out</h4>
+            <div class="reasons-grid">
+                <p class="reason-quote">"I'm spending too much time on internal coordination and not enough leading on the mission."</p>
+                <p class="reason-quote">"We have a major convening coming up. We need someone to zoom out and hold every stakeholder accountable."</p>
+                <p class="reason-quote">"We just won the grant. Now we have to deliver on it, and our operations aren't ready."</p>
+                <p class="reason-quote">"Annual impact reporting season is crushing us, and the report needs to land with funders."</p>
+            </div>
+        </div>
+
+        <div class="results">
+            <h3>Selected wins</h3>
+            <div class="results-grid-horizontal">
+                <div class="result-item">
+                    <div class="result-value">$5M / $1M</div>
+                    <div class="result-desc">operating budget and grants portfolio at Robinhood — tracking system built from scratch, vendor onboarding cut by 4+ weeks.</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">Annual + Quarterly</div>
+                    <div class="result-desc">coordinated Robinhood's annual ESG disclosure across 15+ contributing functions and quarterly board report.</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">400+</div>
+                    <div class="result-desc">moderated a 400+ attendee panel at the NIL Summit; planned and executed convenings with advocacy, higher-ed, veterans, and financial education partners.</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">State-based</div>
+                    <div class="result-desc">delivered mission-driven state engagement strategy through bespoke FinEd programs with external partners (advocacy, higher-ed, community) to prove Robinhood as a force for good.</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">National</div>
+                    <div class="result-desc">designed and scaled innovative FinEd programs at Robinhood: Money Drills for student athletes at 12 D1 universities, Veterans Financial Education, and teacher FinEd training.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="belief">
+        <h4>What I believe</h4>
+        <p class="belief-quote">
+            "Mission isn't a substitute for execution. The organizations that truly deliver invest in both."
+        </p>
+    </div>
+
+    <div class="assessment-section">
+        <h3>How I show up</h3>
+        <div class="assessment-grid">
+            <div class="assessment-card">
+                <div class="assessment-label">Myers-Briggs</div>
+                <div class="assessment-title">ENFJ-A (Protagonist)</div>
+                <div class="assessment-value">
+                    Thoughtful and idealistic, I strive to have a positive impact on other people and the world around me. I rarely shy away from an opportunity to do the right thing, even when doing so is far from easy.
+                </div>
+            </div>
+            <div class="assessment-card">
+                <div class="assessment-label">Strengths Finder</div>
+                <div class="assessment-title">Pioneer & Provider</div>
+                <ul class="strength-list">
+                    <li><strong>Pioneer:</strong> Intrigued by the unfamiliar. I find power in optimism amid uncertainty.</li>
+                    <li><strong>Provider:</strong> I sense others' feelings and act on them, supporting my community through connections and resources.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="contact-info">
+            <a href="mailto:sara@parnitastrategies.com">sara@parnitastrategies.com</a> · <a href="https://linkedin.com/in/sarachima">linkedin.com/in/sarachima</a> · Washington DC
+        </div>
+    </footer>
+</body>
+</html>
