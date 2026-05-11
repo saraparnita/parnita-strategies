@@ -44,10 +44,28 @@
 
         .logo {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             font-weight: 700;
             color: var(--dark);
             letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 6px 0;
+        }
+
+        .logo-line {
+            height: 2px;
+            background-color: var(--dark);
+            width: 100%;
         }
 
         .tagline {
@@ -96,8 +114,8 @@
 
         .experience-summary {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 1.5rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
             margin-top: 2rem;
             padding-top: 2rem;
             border-top: 1px solid var(--gray-light);
@@ -120,36 +138,19 @@
             letter-spacing: 1px;
         }
 
-        /* Education */
-        .education-section {
-            background: linear-gradient(135deg, rgba(139, 154, 127, 0.05) 0%, rgba(184, 149, 106, 0.05) 100%);
-            padding: 2rem 5%;
-            margin: 2rem 0;
-        }
-
-        .education-section h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-
-        .education-list {
+        /* Reasons Grid - 2x2 */
+        .reasons-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
-            max-width: 900px;
-            margin: 0 auto;
+            margin-top: 1rem;
         }
 
-        .education-item {
-            font-size: 0.95rem;
-            color: var(--sage);
-        }
-
-        .education-item strong {
-            color: var(--dark);
-            font-weight: 600;
+        .reasons {
+            padding: 2rem 5%;
+            max-width: 100%;
+            margin: 0;
+            width: 100%;
         }
 
         /* Assessment Section */
@@ -292,39 +293,9 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Reasons Section */
-        .reasons {
-            padding: 2rem 5% 0;
-            max-width: 900px;
-            margin: 0 auto;
-        }
+
 
         .reasons h4 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
-            color: var(--clay);
-            margin-bottom: 1.2rem;
-            font-weight: 600;
-        }
-
-        .reason-quote {
-            font-size: 0.9rem;
-            font-style: italic;
-            color: var(--sage);
-            margin-bottom: 0.8rem;
-            padding-left: 1rem;
-            border-left: 2px solid var(--accent);
-            line-height: 1.6;
-        }
-
-        /* Results Section */
-        .results {
-            padding: 3rem 5%;
-            max-width: 900px;
-            margin: 2rem auto 0;
-        }
-
-        .results h3 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.4rem;
             color: var(--clay);
@@ -332,56 +303,84 @@
             font-weight: 600;
         }
 
-        .results-grid {
+        .reason-quote {
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--sage);
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--accent);
+            line-height: 1.7;
+        }
+
+        /* Results Section */
+        .results {
+            padding: 3rem 5%;
+            max-width: 100%;
+            margin: 2rem 0 0 0;
+            width: 100%;
+        }
+
+        .results h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--clay);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .results-grid-horizontal {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
         }
 
         .result-item {
             background: white;
             border-left: 4px solid var(--accent);
-            padding: 1.5rem;
+            padding: 1.2rem;
             border-radius: 2px;
             box-shadow: 0 2px 8px rgba(26, 26, 26, 0.04);
         }
 
         .result-value {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--clay);
             margin-bottom: 0.5rem;
         }
 
         .result-desc {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--dark);
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         /* Belief Section */
         .belief {
-            padding: 2rem 5%;
-            max-width: 900px;
-            margin: 2rem auto;
+            padding: 4rem 5%;
+            max-width: 100%;
+            margin: 3rem 0;
             background: linear-gradient(135deg, rgba(184, 149, 106, 0.08) 0%, rgba(139, 154, 127, 0.08) 100%);
             border-radius: 2px;
+            width: 100%;
         }
 
         .belief h4 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             color: var(--clay);
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             font-weight: 600;
         }
 
         .belief-quote {
-            font-size: 0.95rem;
+            font-size: 1.4rem;
             font-style: italic;
             color: var(--dark);
-            line-height: 1.7;
+            line-height: 1.9;
+            max-width: 900px;
         }
 
         /* Footer */
@@ -419,7 +418,8 @@
             .education-list,
             .assessment-grid,
             .service-grid,
-            .results-grid {
+            .reasons-grid,
+            .results-grid-horizontal {
                 grid-template-columns: 1fr;
             }
 
@@ -439,18 +439,22 @@
 </head>
 <body>
     <header>
-        <div>
-            <div class="logo">Parnita Strategies</div>
+        <div class="logo">
+            <div class="logo-icon">
+                <div class="logo-line"></div>
+                <div class="logo-line"></div>
+                <div class="logo-line"></div>
+            </div>
+            <span>Parnita Strategies</span>
         </div>
-        <div class="tagline">Fractional Chief of Staff</div>
+        <div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--dark); margin-bottom: 0.3rem;">Sara Chima</div>
+            <div class="tagline" style="font-size: 0.95rem; font-style: normal; font-weight: 500;">Fractional Chief of Staff</div>
+        </div>
     </header>
 
     <div class="hero">
         <h1>I help startup leaders build the operational foundation they need so they can scale at pace without things falling apart.</h1>
-        
-        <div class="hero-quote">
-            "I help startup leaders and founders build the operational foundation they need so they can scale at pace without things falling apart."
-        </div>
 
         <div class="experience-summary">
             <div class="exp-item">
@@ -465,19 +469,75 @@
                 <p class="exp-label">Sectors</p>
                 <p>Consumer Tech · FinTech · GovTech</p>
             </div>
+            <div class="exp-item">
+                <p class="exp-label">Education</p>
+                <p>BA Emory University, MBA University of Cambridge</p>
+            </div>
         </div>
     </div>
 
-    <div class="education-section">
-        <h3>Education</h3>
-        <div class="education-list">
-            <div class="education-item">
-                <strong>BA</strong> Emory University
+    <div class="services">
+        <h2>Services</h2>
+        <div class="service-grid">
+            <div class="service">
+                <h3>Fractional Chief of Staff</h3>
+                <p class="service-meta">2-month minimum retainer, minimum 10 hrs/week</p>
+                <p class="service-desc">
+                    Strategic and operational partner to the CEO or members of the exec team. Focus areas: OKRs, strategic planning, board prep and execution, executive communications, CEO proxy work, talent planning and recruiting.
+                </p>
             </div>
-            <div class="education-item">
-                <strong>MBA</strong> University of Cambridge
+
+            <div class="service">
+                <h3>Operating Sprints</h3>
+                <p class="service-meta">4–8 week projects</p>
+                <p class="service-desc">
+                    Strategic planning and OKR facilitation, full board planning and execution, recurring cost & SaaS audit, internal team AI implementation, talent and org design, building undefined processes, program management, project management for key events, and full-cycle recruiting for key hires.
+                </p>
             </div>
         </div>
+
+        <div class="reasons">
+            <h4>When to reach out</h4>
+            <div class="reasons-grid">
+                <p class="reason-quote">"We're growing fast. We want to scale with clarity and team synergy, not chaos to clean up later."</p>
+                <p class="reason-quote">"My exec team operates in parallel, not in sync. I'm stitching them together instead of leading, and it's slowing us all down."</p>
+                <p class="reason-quote">"Every board cycle is a stressful scramble, and the meeting doesn't resonate the way it should."</p>
+                <p class="reason-quote">"We've got a major program coming up. I need someone to zoom out, hold every stakeholder accountable, and ensure we launch on time."</p>
+            </div>
+        </div>
+
+        <div class="results">
+            <h3>Selected wins</h3>
+            <div class="results-grid-horizontal">
+                <div class="result-item">
+                    <div class="result-value">15%</div>
+                    <div class="result-desc">drove annual OpEx savings at a Series A GovTech startup — 12+ tools reviewed, vendors consolidated, process redesigned with new vendors.</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">$5M / $1M</div>
+                    <div class="result-desc">operating budget and grants portfolio at Robinhood — tracking system built from scratch, vendor onboarding cut by 4+ weeks.</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">6 weeks</div>
+                    <div class="result-desc">to close a niche search hiring the company's first Head of Data. Secured the candidate over a higher competing offer.</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">4 years</div>
+                    <div class="result-desc">of disciplined board planning and execution at Series A and publicly traded companies. Transformed process from last minute and disorganized to consistently completing pre-sends the week prior.</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">8 weeks</div>
+                    <div class="result-desc">Aligned 7 cross-functional teams through an 8-week sprint for virtual product launch; held the date with strong delivery despite risk of repeat delays.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="belief">
+        <h4>What I believe</h4>
+        <p class="belief-quote">
+            "OKRs don't fix execution problems — they hide them. Every CEO needs a strong proxy tracking progress on their behalf."
+        </p>
     </div>
 
     <div class="assessment-section">
@@ -499,66 +559,6 @@
                 </ul>
             </div>
         </div>
-    </div>
-
-    <div class="services">
-        <h2>Services</h2>
-        <div class="service-grid">
-            <div class="service">
-                <h3>Fractional Chief of Staff</h3>
-                <p class="service-meta">2-month minimum retainer, minimum 10 hrs/week</p>
-                <p class="service-desc">
-                    Strategic and operational partner to the CEO or members of the exec team. Focus areas: OKRs, strategic planning, board prep and execution, executive communications, CEO proxy work, talent planning and recruiting.
-                </p>
-                <div class="reasons">
-                    <h4>When to reach out</h4>
-                    <p class="reason-quote">"We're growing fast. We want to scale with clarity and team synergy, not chaos to clean up later."</p>
-                    <p class="reason-quote">"My exec team operates in parallel, not in sync. I'm stitching them together instead of leading, and it's slowing us all down."</p>
-                    <p class="reason-quote">"Every board cycle is a stressful scramble, and the meeting doesn't resonate the way it should."</p>
-                    <p class="reason-quote">"We've got a major program coming up. I need someone to zoom out, hold every stakeholder accountable, and ensure we launch on time."</p>
-                </div>
-            </div>
-
-            <div class="service">
-                <h3>Operating sprints</h3>
-                <p class="service-meta">4–8 week projects</p>
-                <p class="service-desc">
-                    Strategic planning and OKR facilitation, full board planning and execution, recurring cost & SaaS audit, internal team AI implementation, talent and org design, building undefined processes, program management, project management for key events, and full-cycle recruiting for key hires.
-                </p>
-                <div class="results">
-                    <h3>Selected wins</h3>
-                    <div class="results-grid">
-                        <div class="result-item">
-                            <div class="result-value">15%</div>
-                            <div class="result-desc">drove annual OpEx savings at a Series A GovTech startup — 12+ tools reviewed, vendors consolidated, process redesigned with new vendors.</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-value">$5M / $1M</div>
-                            <div class="result-desc">operating budget and grants portfolio at Robinhood — tracking system built from scratch, vendor onboarding cut by 4+ weeks.</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-value">6 weeks</div>
-                            <div class="result-desc">to close a niche search hiring the company's first Head of Data. Secured the candidate over a higher competing offer.</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-value">4 years</div>
-                            <div class="result-desc">of disciplined board planning and execution at Series A and publicly traded companies. Transformed process from last minute and disorganized to consistently completing pre-sends the week prior.</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-value">8 weeks</div>
-                            <div class="result-desc">Aligned 7 cross-functional teams through an 8-week sprint for virtual product launch; held the date with strong delivery despite risk of repeat delays.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="belief">
-        <h4>What I believe</h4>
-        <p class="belief-quote">
-            "OKRs don't fix execution problems — they hide them. Every CEO needs a strong proxy tracking progress on their behalf."
-        </p>
     </div>
 
     <footer>
